@@ -14,8 +14,11 @@ export const httpHelper = () => {
 			: defaultHeaders
 
 		options.body = JSON.stringify(options.body) || false
+
+		//Se o corpo da requisição não existir, ou seja, se for falso, deleta o corpo da requisição atual. 
 		if (!options.body) delete options.body
 
+		//
 		setTimeout(() => {
 			controller.abort()
 		}, 3000)
