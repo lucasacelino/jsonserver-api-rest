@@ -5,6 +5,7 @@ import "./styles/App.css"
 function App() {
 	return (
 		<>
+			{/*Cabeçalho da aplicação da página*/}
 			<header>
 				<div className='header__content'>
 					<div className='logo'>
@@ -13,6 +14,7 @@ function App() {
 					</div>
 				</div>
 			</header>
+			{/*Abaixo, é definido a página principal da aplicação*/}
 			<main>
 				<CrudUser />
 			</main>
