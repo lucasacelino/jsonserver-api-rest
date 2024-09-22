@@ -29,18 +29,22 @@ export const httpHelper = () => {
 	}
 
 	// Abaixo é definida funções que irão executar os métodos HTTP, como: GET, POST, PUT e DELETE
+	// método GET
 	const get = (url, options = {}) => customFetch(url, options)
 
+	// método POST
 	const post = (url, options) => {
 		options.method = "POST"
 		return customFetch(url, options)
 	}
 
+	// método PUT
 	const put = (url, options) => {
 		options.method = "PUT"
 		return customFetch(url, options)
 	}
 
+	// método DELETE
 	const del = (url, options) => {
 		options.method = "DELETE"
 		return customFetch(url, options)
