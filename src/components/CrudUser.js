@@ -5,9 +5,13 @@ import Table from "./Table"
 import { httpHelper } from "../helpers/httpHelper"
 
 const CrudUser = () => {
+
+	// é definifdo o hook useState para gerenciar as modificações em usuários
 	const [users, setUsers] = useState(null)
 
+	// na variável url é definida o endpont(users) que fará as requisições
 	const url = "http://localhost:5000/users"
+
 	const api = httpHelper()
 
 	useEffect(() => {
