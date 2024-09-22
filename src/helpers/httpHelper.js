@@ -46,6 +46,7 @@ export const httpHelper = () => {
 		return customFetch(url, options)
 	}
 
+	// Retorna um objeto contendo as funções que executam os métodos HTTP
 	return {
 		get,
 		post,
