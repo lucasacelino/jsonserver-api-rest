@@ -17,6 +17,7 @@ const DropCompanies = ({ companiesId, handleValue }) => {
 			.catch(err => console.log(err))
 	}, [])
 
+	// Se os dados das companias/empresas nãp existirem, forem falso, retorna nulo.
 	if (!companies) return null
 
 	return (
