@@ -8,15 +8,19 @@ const DropCompanies = ({ companiesId, handleValue }) => {
 	// recebe a url do endpoint companies, a qual irá executar as requisições
 	const url = "http://localhost:5000/companies"
 
-	// a variável api recebe a função httpHelper, a qual irá os métodos HTTP
+	// a variável api recebe a função httpHelper, a qual irá executar os métodos HTTP
 	const api = httpHelper()
 
 	useEffect(() => {
 		api
-			.get(url)
+			.get(url) // realiza a requisição do tipo GET
+
+			// Se a requisição for bem sucedida, adiciona a lista de empresas as informações atuais e, posteriormente, adicona o restante dos valores da API.
 			.then(res => {
 				setCompanies([{ id: 0, name: "Select Company" }, ...res])
 			})
+
+			// Se a requisição não for bem sucedida, retorna um erro. 
 			.catch(err => console.log(err))
 	}, [])
 
