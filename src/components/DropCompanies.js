@@ -3,6 +3,8 @@ import { httpHelper } from "../helpers/httpHelper"
 
 const DropCompanies = ({ companiesId, handleValue }) => {
 	const [companies, setCompanies] = useState(null)
+
+// É definido um hook que gerencia a lista de empresas 
 	const [company, setCompany] = useState(companiesId)
 
 	// recebe a url do endpoint companies, a qual irá executar as requisições
