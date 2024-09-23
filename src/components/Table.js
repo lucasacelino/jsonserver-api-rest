@@ -2,9 +2,11 @@ import React from "react"
 import Form from "./Form"
 
 /*
-O componente Table
+O componente Table é criado com 4 parâmetros/variáveis utilizando desestruturação em utiliza o conceito de props. Em que tabela, poderá criar, atualizar e deletar o usuário.
 */
 const Table = ({ users, postUser, updateUser, deleteUser }) => {
+
+	// A função showUpdateUser serve para mostrar os dados do usuário quando o botão é clicado através do id corrente. 
 	const showUpdateUser = id => {
 		const form = document.getElementsByClassName(`show-form-${id}`)
 		form[0].classList.toggle("hide-form")

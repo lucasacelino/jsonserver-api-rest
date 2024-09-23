@@ -7,6 +7,14 @@
       "phone": "8345589789",
       "companiesId": "1",
       "id": 1
+    },
+    {
+      "name": "Lucas",
+      "username": "",
+      "email": "lucas@gmail",
+      "phone": "8345589789",
+      "companiesId": "1",
+      "id": 2
     }
   ],
   "companies": [
