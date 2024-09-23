@@ -11,7 +11,8 @@ const CrudUser = () => {
 
 	// na variável url é definida o endpont(users) que fará as requisições
 	const url = "http://localhost:5000/users"
-
+	
+	// A variável api recebe a função httpHelper, a qual irá executar as requisições via os métodos HTTP
 	const api = httpHelper()
 
 	useEffect(() => {
@@ -32,6 +33,7 @@ const CrudUser = () => {
 			.catch(err => console.log(err))
 	}
 
+	//A função deleteUser, deleta um usuário através do id. 
 	const deleteUser = id => {
 		api
 			.del(`${url}/${id}`, {})
