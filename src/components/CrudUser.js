@@ -48,12 +48,17 @@ const CrudUser = () => {
 			.catch(err => console.log(err))
 	}
 
+	// Se não existir usuários, retorna null.
 	if (!users) return null
 
 	return (
 		<>
+
+			{/*Parte que adiciona um novo usuário*/}
 			<h3>New user</h3>
 			<Form postUser={postUser} />
+
+			{/*Parte que lista os usuários salvos*/}
 			<div className='all-users'>
 				<h3>All users</h3>
 				<Table
