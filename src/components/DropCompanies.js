@@ -5,7 +5,10 @@ const DropCompanies = ({ companiesId, handleValue }) => {
 	const [companies, setCompanies] = useState(null)
 	const [company, setCompany] = useState(companiesId)
 
+	// recebe a url do endpoint companies, a qual irá executar as requisições
 	const url = "http://localhost:5000/companies"
+
+	// a variável api recebe a função httpHelper, a qual irá os métodos HTTP
 	const api = httpHelper()
 
 	useEffect(() => {
@@ -17,7 +20,7 @@ const DropCompanies = ({ companiesId, handleValue }) => {
 			.catch(err => console.log(err))
 	}, [])
 
-	// Se os dados das companias/empresas nãp existirem, forem falso, retorna nulo.
+	// Se os dados das companias/empresas não existirem, forem falso, retorna nulo.
 	if (!companies) return null
 
 	return (
