@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react"
 import { httpHelper } from "../helpers/httpHelper"
 
 const DropCompanies = ({ companiesId, handleValue }) => {
+
+// É definido um useState que gerencia os estado das companies/empresas
 	const [companies, setCompanies] = useState(null)
 
 // É definido um hook que gerencia a lista de empresas 
