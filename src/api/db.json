@@ -1,4 +1,5 @@
 {
+  //O arquivo db.json serve para um banco de dados para salvar as informações do usuário. 
   "users": [
     {
       "name": "Lucas",
