@@ -19,9 +19,13 @@ const CrudUser = () => {
 		getUsers()
 	}, [])
 
+ /* a função postUser cria um novo usuário. Tem como parâmetro a variável user. 
 	const postUser = user => {
 		api
+   // passa como parâmetro a url e user no corpo da requisição
 			.post(`${url}`, { body: user })
+   
+   // Se a requisição for realizada com sucesso retorna uma lista de usuários com o usuário criado. 
 			.then(res => getUsers())
 			.catch(err => console.log(err))
 	}
