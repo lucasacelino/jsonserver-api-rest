@@ -1,5 +1,5 @@
 {
-  //O arquivo db.json serve para um banco de dados para salvar as informações do usuário. 
+  //O arquivo db.json serve para um banco de dados para salvar as informações do usuário e as empresas correspondentes. 
   "users": [
     {
       "name": "Lucas",
