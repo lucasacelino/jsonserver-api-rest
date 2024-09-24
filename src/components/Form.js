@@ -22,13 +22,14 @@ const Form = ({ userData = {}, postUser, updateUser }) => {
   /*Se o usuário existir, atualize os dados do usuário atual, passando o id e o usuário*/
 		if (userData.id) {
 			updateUser(userData.id, user)
-  /Caso não exista um usuário, é criado um novo usuário. 
+  //Caso não exista um usuário, é criado um novo usuário. 
 		} else {
 			postUser(user)
 		}
 	}
 
 	return (
+{/* Abaixo é criado um formulário contendo os campos para que sejam preenchidos para a cr de um novo usuário, contendo nome, e-mail, telefone e a empresa */} 
 		<form onSubmit={submitUser} className='row'>
 			<input
 				type='text'
