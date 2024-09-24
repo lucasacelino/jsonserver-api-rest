@@ -2,7 +2,11 @@ import React, { useState } from "react"
 import DropComapies from "./DropCompanies"
 /*O componente Form é um componente que irá ser usado para que o usuário informe as informações nos campos especificados. É criado com 3 parâmetros ou props que serão usados para para atualizar os dados de um usuário, criar um novo usuário e manipular os dados do usuário*/
 const Form = ({ userData = {}, postUser, updateUser }) => {
+
+	/*É criado um useState para gerenciar o estado dos dados de user. É inicializado um objeto com as propriedades definidas*/
 	const [user, setUser] = useState({
+
+		/* Explicando o operador ??: Se caso a proprieadade name em userData não tiver nenhum dado, é atribuido a propriedade name uma string vazia. O mesmo reflete nas outras propriedades.*/
 		name: userData.name ?? "",
 		username: userData.username ?? "",
 		email: userData.email ?? "",
@@ -10,6 +14,7 @@ const Form = ({ userData = {}, postUser, updateUser }) => {
 		companiesId: userData.companiesId ?? "0",
 	})
 
+	/*A função handleValue serve para capturar o valor de um elemento. A função em si atribui(espalha) todos os valores do usuário em user e captura o nome do usuário.*/
 	const handleValue = e => {
 		setUser({ ...user, [e.target.name]: e.target.value })
 	}
