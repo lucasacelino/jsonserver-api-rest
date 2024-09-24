@@ -14,9 +14,12 @@ const Form = ({ userData = {}, postUser, updateUser }) => {
 		setUser({ ...user, [e.target.name]: e.target.value })
 	}
 
+	// A função submitUser, é uma função que realiza a submissão de dados de um usuário.
 	const submitUser = e => {
+		//A chamada da função preventDefault() evita que ao submeter os dados, a página seja carregada. Apenas os dados serão enviados.
 		e.preventDefault()
 
+		//Se o id do usuário for igual a zero, retorne o usuário do mesmo id.
 		if (user.companiesId === "0") return
 
   /*Se o usuário existir, atualize os dados do usuário atual, passando o id e o usuário*/
@@ -29,7 +32,8 @@ const Form = ({ userData = {}, postUser, updateUser }) => {
 	}
 
 	return (
-{/* Abaixo é criado um formulário contendo os campos para que sejam preenchidos para a cr de um novo usuário, contendo nome, e-mail, telefone e a empresa */} 
+		
+		/* Abaixo é criado um formulário contendo os campos para que sejam preenchidos para a cr de um novo usuário, contendo nome, e-mail, telefone e a empresa */
 		<form onSubmit={submitUser} className='row'>
 			<input
 				type='text'
