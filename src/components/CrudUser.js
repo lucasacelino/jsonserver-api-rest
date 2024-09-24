@@ -4,6 +4,7 @@ import Table from "./Table"
 
 import { httpHelper } from "../helpers/httpHelper"
 
+// O compenente CrudUser serve para executar as operações de criar, atualizar, ler e deletar um usuário. 
 const CrudUser = () => {
 
 	// é definifdo o hook useState para gerenciar o estado dos dados em usuários
@@ -46,9 +47,13 @@ const CrudUser = () => {
 			.catch(err => console.log(err))
 	}
 
+	// A função getUsers lista todos os usuários já salvos. 
 	const getUsers = () => {
 		api
+			//Busca todos os usuários já salvos com a adição de um parãmetro que faz busca das empresas que os usuários trabalham
 			.get(`${url}?_expand=companies`)
+
+			// Se a requisção for bem sucedida, adiciona os dados em usuários
 			.then(res => {
 				setUsers(res)
 			})
