@@ -19,13 +19,18 @@ const CrudUser = () => {
 		getUsers()
 	}, [])
 
+ // a função postUser cria um novo usuário. Tem como parâmetro a variável user. 
 	const postUser = user => {
 		api
+   // passa como parâmetro a url e user no corpo da requisição
 			.post(`${url}`, { body: user })
+   
+   // Se a requisição for realizada com sucesso retorna uma lista de usuários com o usuário criado. 
 			.then(res => getUsers())
 			.catch(err => console.log(err))
 	}
-
+ 
+ /*A função updateUser atualiza os dados de um usuário. A qual recebe como parâmetro o id do usuário e os dados do user em específico. Atualiza os dados do usuário informando o id e recebe os dados do usuário no corpo da requisição*/
 	const updateUser = (id, user) => {
 		api
 			.put(`${url}/${id}`, { body: user })
@@ -33,7 +38,7 @@ const CrudUser = () => {
 			.catch(err => console.log(err))
 	}
 
-	//A função deleteUser, deleta um usuário através do id. 
+	//A função deleteUser, deleta um usuário através do id. Para deletar o usuário, passa o id na url e um objeto vazio. 
 	const deleteUser = id => {
 		api
 			.del(`${url}/${id}`, {})

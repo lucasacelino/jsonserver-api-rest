@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import DropComapies from "./DropCompanies"
-
+/*O componente Form é um componente que irá ser usado para que o usuário informe as informações nos campos especificados. É criado com 3 parâmetros ou props que serão usados para para atualizar os dados de um usuário, criar um novo usuário e manipular os dados do usuário*/
 const Form = ({ userData = {}, postUser, updateUser }) => {
 	const [user, setUser] = useState({
 		name: userData.name ?? "",
@@ -19,14 +19,17 @@ const Form = ({ userData = {}, postUser, updateUser }) => {
 
 		if (user.companiesId === "0") return
 
+  /*Se o usuário existir, atualize os dados do usuário atual, passando o id e o usuário*/
 		if (userData.id) {
 			updateUser(userData.id, user)
+  //Caso não exista um usuário, é criado um novo usuário. 
 		} else {
 			postUser(user)
 		}
 	}
 
 	return (
+{/* Abaixo é criado um formulário contendo os campos para que sejam preenchidos para a cr de um novo usuário, contendo nome, e-mail, telefone e a empresa */} 
 		<form onSubmit={submitUser} className='row'>
 			<input
 				type='text'
