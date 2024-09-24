@@ -34,13 +34,20 @@ const DropCompanies = ({ companiesId, handleValue }) => {
 
 	return (
 		<select
+
+			//captura o ID da empresa
 			name='companiesId'
 			value={company}
+
 			onChange={e => {
+				//Adiciona o valor escolhido
 				setCompany(e.target.value)
+
+				//captura o valor.
 				handleValue(e)
 			}}
 		>
+			{/*Lista as empresas disponiveis utilizando a função map()*/}
 			{companies.map(c => (
 				<option value={c.id} key={c.id}>
 					{c.name}
