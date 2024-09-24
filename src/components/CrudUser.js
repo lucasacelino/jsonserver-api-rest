@@ -19,7 +19,7 @@ const CrudUser = () => {
 		getUsers()
 	}, [])
 
- /* a função postUser cria um novo usuário. Tem como parâmetro a variável user. 
+ // a função postUser cria um novo usuário. Tem como parâmetro a variável user. 
 	const postUser = user => {
 		api
    // passa como parâmetro a url e user no corpo da requisição
