@@ -19,9 +19,10 @@ const Form = ({ userData = {}, postUser, updateUser }) => {
 
 		if (user.companiesId === "0") return
 
-  //
+  /*Se o usuário existir, atualize os dados do usuário atual, passando o id e o usuário*/
 		if (userData.id) {
 			updateUser(userData.id, user)
+  /Caso não exista um usuário, é criado um novo usuário. 
 		} else {
 			postUser(user)
 		}
