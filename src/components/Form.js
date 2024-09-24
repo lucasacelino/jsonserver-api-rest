@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import DropComapies from "./DropCompanies"
-
+/*O componente Form é um componente que irá ser usado para que o usuário informe as informações nos campos especificados. É criado com 3 parâmetros ou props que serão usados para para atualizar os dados de um usuário, criar um novo usuário e manipular os dados do usuário*/
 const Form = ({ userData = {}, postUser, updateUser }) => {
 	const [user, setUser] = useState({
 		name: userData.name ?? "",
