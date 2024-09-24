@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react"
 import { httpHelper } from "../helpers/httpHelper"
 
+// o componente DropCompanies serve para listar as empresas disponiveis para que o usuário escolha na hora de salvar os seus dados. É passado cmo parãmetro duas variáveis: companiesId recebe o Id de cada empresa e handleValue captura o valor da empresa escolhida
 const DropCompanies = ({ companiesId, handleValue }) => {
 
-// É definido um useState que gerencia os estado das companies/empresas
+	// É definido um useState que gerencia os estado das companies/empresas
 	const [companies, setCompanies] = useState(null)
 
-// É definido um hook que gerencia a lista de empresas 
+	// É definido um hook que gerencia a lista de empresas 
 	const [company, setCompany] = useState(companiesId)
 
 	// recebe a url do endpoint companies, a qual irá executar as requisições
