@@ -1,4 +1,5 @@
 {
+// O arquivo dbbackup.json serve como um arquivo de backup para que as informações padrões fiquem salvas. 
 	"users": [
 		{
 			"id": 1,
