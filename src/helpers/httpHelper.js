@@ -18,12 +18,13 @@ export const httpHelper = () => {
 		//Se o corpo da requisição não existir, ou seja, se for falso, deleta o corpo da requisição atual. 
 		if (!options.body) delete options.body
 
-		//
+		/*É definida um função setTimeout para temporizador o tempo da requisição 
 		setTimeout(() => {
 			controller.abort()
 		}, 3000)
 
 		try {
+   /*A requisição é declarada com a palavra chave await
 			const response = await fetch(url, options)
 			return await response.json()
 		} catch (err) {
