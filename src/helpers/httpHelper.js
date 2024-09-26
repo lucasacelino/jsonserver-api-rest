@@ -24,7 +24,7 @@ export const httpHelper = () => {
 		//Se o corpo da requisição não existir, ou seja, se for falso, deleta o corpo da requisição atual. 
 		if (!options.body) delete options.body
 
-		/*É definida um função setTimeout para temporizador o tempo da requisição 
+		/*É definida um função setTimeout para temporizador o tempo da requisição. Nesse caso, se a requisição ultrapassar o limite de 3 segundos, a requisição atual é cancelada.*/
 		setTimeout(() => {
 			controller.abort()
 		}, 3000)
