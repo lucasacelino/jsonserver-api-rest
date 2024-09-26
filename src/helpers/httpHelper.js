@@ -1,6 +1,10 @@
 export const httpHelper = () => {
 	const customFetch = async (url, options = {}) => {
+
+  //define como o método padrão o GET 
 		const defaultMethod = "GET"
+
+  //define o cabeçalho da requisição o conteúdo para que aceite a resposta dos dados um json. 
 		const defaultHeaders = {
 			"Content-Type": "application/json",
 			Accept: "application/json",
