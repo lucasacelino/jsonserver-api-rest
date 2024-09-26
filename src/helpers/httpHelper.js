@@ -9,6 +9,8 @@ export const httpHelper = () => {
 			"Content-Type": "application/json",
 			Accept: "application/json",
 		}
+
+  /* A variável controller recebe a classe AbortController, a classe AbortController executa o cancelamento de uma requisição*/
 		const controller = new AbortController()
 		options.signal = controller.signal
 
