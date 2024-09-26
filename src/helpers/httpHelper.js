@@ -16,7 +16,7 @@ export const httpHelper = () => {
   // Options recebe de controller a propriedade signal. A propriedade signal executa uma sinalização em relação a execução da requisição. 
 		options.signal = controller.signal
 
-  
+  // options.method recebe o método já defenido no objeto ou o método padrão que é o GET
 		options.method = options.method || defaultMethod
 		options.headers = options.headers
 			? { ...defaultHeaders, ...options.headers }
