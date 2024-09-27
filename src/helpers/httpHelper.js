@@ -39,7 +39,11 @@ export const httpHelper = () => {
 		}, 3000)
 
 		try {
-   		/*A requisição é declarada com a palavra chave await*/
+   			/*As seguintes linhas abaixo executam as ações:
+			response: recebe uma requisição com fetch e await, o await faz com que a requisção espere ser resolvida/executda.
+			É retornado a resposta da requisição no formato json.
+			Se a requisição não for resolvida/executada, é retornado erro.
+			*/
 			const response = await fetch(url, options)
 			return await response.json()
 		} catch (err) {
