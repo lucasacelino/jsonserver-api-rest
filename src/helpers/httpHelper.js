@@ -1,5 +1,6 @@
 /*a funçaõ httpHelper executa as as ações dos métodos HTTP. Na função é criada uma função customfecth que executa uma requisição HTTP.*/
 export const httpHelper = () => {
+	//A função customFetch irá executar uma requisição HTTP a partir de uma url e suas opções de métodos. customeFetch receba a palavra async,isto é, uma função assicrona que retorna uma promessa. 
 	const customFetch = async (url, options = {}) => {
 
   //define como o método padrão o GET 
