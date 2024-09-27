@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   // O arquivo db.json serve para alvar os dados dos usuários
+=======
+  //O arquivo db.json serve como um banco de dados para salvar as informações do usuário e as empresas correspondentes. 
+>>>>>>> fef0a834b2c2e843e354b744a08559c6f49ee8fd
   "users": [
     {
       "name": "Lucas",
