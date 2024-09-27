@@ -9,10 +9,14 @@ export const httpHelper = () => {
 		options.signal = controller.signal
 
 		options.method = options.method || defaultMethod
+
+		//
 		options.headers = options.headers
 			? { ...defaultHeaders, ...options.headers }
 			: defaultHeaders
 
+		
+		/*A variável options.body recebe o contéudo da requisição, se caso, existir ou falso, se o conteúdo não existir.*/
 		options.body = JSON.stringify(options.body) || false
 
 		//Se o corpo da requisição não existir, ou seja, se for falso, deleta o corpo da requisição atual. 

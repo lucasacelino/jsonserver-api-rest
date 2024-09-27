@@ -1,4 +1,5 @@
 {
+  // O arquivo db.json serve para alvar os dados dos usuários
   "users": [
     {
       "name": "Lucas",
