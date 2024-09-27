@@ -1,3 +1,4 @@
+/*a funçaõ httpHelper executa as as ações dos métodos HTTP. Na função é criada uma função customfecth que executa uma requisição HTTP.*/
 export const httpHelper = () => {
 	const customFetch = async (url, options = {}) => {
 
@@ -19,7 +20,7 @@ export const httpHelper = () => {
   // options.method recebe o método já defenido no objeto ou o método padrão que é o GET
 		options.method = options.method || defaultMethod
 
-		//
+		//A lógica em options headers é a seguinte: Se existir um cabeçalho, options.headers recebe tudo o que tem em default headers mais o conteúdo definido em options.headers. Caso contrário, é retornado o cabeçalho padrão.
 		options.headers = options.headers
 			? { ...defaultHeaders, ...options.headers }
 			: defaultHeaders
@@ -31,13 +32,13 @@ export const httpHelper = () => {
 		//Se o corpo da requisição não existir, ou seja, se for falso, deleta o corpo da requisição atual. 
 		if (!options.body) delete options.body
 
-		/*É definida um função setTimeout para temporizador o tempo da requisição. Nesse caso, se a requisição ultrapassar o limite de 3 segundos, a requisição atual é cancelada.*/
+		/*É definida um função setTimeout para temporizar o tempo da requisição. Nesse caso, se a requisição ultrapassar o limite de 3 segundos, a requisição atual é cancelada.*/
 		setTimeout(() => {
 			controller.abort()
 		}, 3000)
 
 		try {
-   /*A requisição é declarada com a palavra chave await
+   		/*A requisição é declarada com a palavra chave await*/
 			const response = await fetch(url, options)
 			return await response.json()
 		} catch (err) {
